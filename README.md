@@ -6,6 +6,14 @@
 
 Автономная программа для Windows 10/11 x64. Дополнительно устанавливать .NET или Node.js не требуется. Панель управления открывается в браузере на том же компьютере.
 
+## Раскрывающийся блок олл-ина — 1.8.3 preview
+
+**[Скачать OKO 1.8.3 для Windows](https://github.com/resokol/OKO/raw/refs/heads/main/downloads/OKO-1.8.3-preview.exe)** · [Комплект с готовым Vosk](https://github.com/resokol/OKO/raw/refs/heads/main/downloads/OKO-1.8.3-Vosk-offline.7z)
+
+В «Сценарии» настройки **«Олл-ин или дуэль»** вынесены в отдельный свёрнутый блок рядом с эмоциями, долгим ходом и проходом по игрокам. Направление прохода перенесено в «Проход по игрокам». Проверены раскрытие с клавиатуры, сохранение скрытых настроек и экран 320/768/1440. Логика режиссёра и голоса прежняя. [Инструкция](docs/workspace-1.8.md) · [Проверка](docs/verification-1.8.3-disclosure.md).
+
+Перед заменой EXE завершите старый OKO через «Завершить работу». Сохраняйте папку speech-assets: повторно скачивать модель не нужно.
+
 ## Слежение за столом — 1.8.2 preview
 
 **[Скачать OKO 1.8.2 с готовым Vosk](https://github.com/resokol/OKO/raw/refs/heads/main/downloads/OKO-1.8.2-Vosk-offline.7z)** · [Обычная EXE](https://github.com/resokol/OKO/raw/refs/heads/main/downloads/OKO-1.8.2-preview.exe) · [Инструкция](docs/dealer-speech.md)
