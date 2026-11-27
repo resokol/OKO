@@ -2,11 +2,11 @@
 
 ## Скачать
 
-**[Скачать полный комплект OKO 1.8.9 preview с Vosk](https://github.com/resokol/OKO/releases/download/v1.8.9-preview/OKO-1.8.9-Vosk-offline.zip)** · [Страница выпуска](https://github.com/resokol/OKO/releases/tag/v1.8.9-preview)
+**[Скачать полный комплект OKO 1.8.10 preview с Vosk](https://github.com/resokol/OKO/releases/download/v1.8.10-preview/OKO-1.8.10-Vosk-offline.zip)** · [Страница выпуска](https://github.com/resokol/OKO/releases/tag/v1.8.10-preview)
 
 Автономная программа для Windows 10/11 x64. Дополнительно устанавливать .NET или Node.js не требуется. Панель управления открывается в браузере на том же компьютере.
 
-В 1.8.9 исправлено голосовое слежение при повторном ходе бокса. Из 1.8.8 обновление можно установить через «Система → Обновление OKO».
+В 1.8.10 OKO восстанавливает голосовую отправку после смены состояния стола, понимает разговорные команды и делает Merge на крупный план при открытии ривера. Для обновления откройте «Система → Обновление OKO».
 
 ## Подключение через API PokerVision
 

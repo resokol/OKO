@@ -1,0 +1,32 @@
+name: Publish full OKO 1.8.10 preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/distribution/1.8.10/**'
+      - '.github/workflows/publish-oko-1810.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: oko-release-1.8.10
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify and package the Windows application and Vosk
+        run: |
+          python -m pip install bsdiff4==1.2.6 py7zr==1.1.4
+          python .github/distribution/1.8.10/package.py
+      - name: Publish the complete release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.8.10-preview \
+            release-1.8.10/OKO-1.8.10-Vosk-offline.zip release-1.8.10/OKO-1.8.10-preview-win-x64.exe release-1.8.10/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --title "OKO 1.8.10 preview" --draft --prerelease \
+            --notes-file .github/distribution/1.8.10/release.md
+          gh release edit v1.8.10-preview --draft=false
