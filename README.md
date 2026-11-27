@@ -2,9 +2,11 @@
 
 ## Скачать
 
-**[Скачать полный комплект OKO 1.8.7 preview с Vosk](https://github.com/resokol/OKO/releases/download/v1.8.7-preview/OKO-1.8.7-Vosk-offline.zip)** · [Страница выпуска](https://github.com/resokol/OKO/releases/tag/v1.8.7-preview)
+**[Скачать полный комплект OKO 1.8.8 preview с Vosk](https://github.com/resokol/OKO/releases/download/v1.8.8-preview/OKO-1.8.8-Vosk-offline.zip)** · [Страница выпуска](https://github.com/resokol/OKO/releases/tag/v1.8.8-preview)
 
 Автономная программа для Windows 10/11 x64. Дополнительно устанавливать .NET или Node.js не требуется. Панель управления открывается в браузере на том же компьютере.
+
+В 1.8.8 добавлены автоматический сплит vMix по камерам игроков, Merge на крупный план стола и встроенное обновление в разделе «Система».
 
 ## Подключение через API PokerVision
 
