@@ -1,0 +1,36 @@
+name: Publish full OKO 1.8.12 preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/distribution/1.8.12/**'
+      - '.github/workflows/publish-oko-1812.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: oko-release-1.8.12
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Download previous Windows executable
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download v1.8.11-preview --repo "$GITHUB_REPOSITORY" --pattern OKO-1.8.11-preview-win-x64.exe --dir release-base
+      - name: Verify and package the Windows application and Vosk
+        run: |
+          python -m pip install bsdiff4==1.2.6 py7zr==1.1.4
+          python .github/distribution/1.8.12/package.py
+      - name: Publish the complete release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.8.12-preview \
+            release-1.8.12/OKO-1.8.12-Vosk-offline.zip release-1.8.12/OKO-1.8.12-preview-win-x64.exe release-1.8.12/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --title "OKO 1.8.12 preview" --draft --prerelease \
+            --notes-file .github/distribution/1.8.12/release.md
+          gh release edit v1.8.12-preview --draft=false

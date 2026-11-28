@@ -2,11 +2,11 @@
 
 ## Скачать
 
-**[Скачать полный комплект OKO 1.8.11 preview с Vosk](https://github.com/resokol/OKO/releases/download/v1.8.11-preview/OKO-1.8.11-Vosk-offline.zip)** · [Страница выпуска](https://github.com/resokol/OKO/releases/tag/v1.8.11-preview)
+**[Скачать полный комплект OKO 1.8.12 preview с Vosk](https://github.com/resokol/OKO/releases/download/v1.8.12-preview/OKO-1.8.12-Vosk-offline.zip)** · [Страница выпуска](https://github.com/resokol/OKO/releases/tag/v1.8.12-preview)
 
 Автономная программа для Windows 10/11 x64. Дополнительно устанавливать .NET или Node.js не требуется. Панель управления открывается в браузере на том же компьютере.
 
-В 1.8.11 OKO удерживает текущий кадр между ходами игроков. Обновление доступно в «Система → Обновление OKO».
+В 1.8.12 добавлен Merge с общего плана на крупный перед пятой картой в дуэли. Выберите «Перед ривером в дуэли» в разделе «Сценарий → Олл-ин или дуэль». Обновление доступно в «Система → Обновление OKO».
 
 ## Подключение через API PokerVision
 
